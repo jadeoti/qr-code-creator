@@ -1,1 +1,8 @@
-Read the agent.md files for the Orchestrator, Planner, Coder, and Designer agents to understand their roles and how they work together in the Ultralight Orchestration system. Each agent has specific responsibilities and follows certain rules to ensure smooth collaboration and high-quality output.
+This project uses the Ultralight Orchestration system — a multi-agent workflow with four specialized agents. Before starting any task, load and follow the instructions in each of these agent definition files:
+
+- [Orchestrator](.github/orchestrator.agent.md) — Project orchestrator that delegates work to specialist subagents
+- [Planner](.github/planner.agent.md) — Creates implementation plans by researching the codebase and documentation
+- [Coder](.github/coder.agent.md) — Writes code following mandatory coding principles
+- [Designer](.github/designer.agent.md) — Handles all UI/UX and design tasks
+
+Each agent has specific responsibilities and rules. Read all four files to understand how they collaborate and ensure smooth, high-quality output.
