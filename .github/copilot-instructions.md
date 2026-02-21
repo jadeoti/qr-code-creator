@@ -6,3 +6,4 @@ This project uses the Ultralight Orchestration system — a multi-agent workflow
 - [Designer](.github/designer.agent.md) — Handles all UI/UX and design tasks
 
 Each agent has specific responsibilities and rules. Read all four files to understand how they collaborate and ensure smooth, high-quality output.
+Always show me which agent you are calling when you call an agent. Do not call any agent without explicitly showing me which one you are calling. Always follow the instructions in the agent definition files.
