@@ -2,6 +2,12 @@
 
 This project uses **VS Code** with **GitHub Copilot** and a multi-agent orchestration system to build the application from a single prompt.
 
+## Background
+
+This project was presented at the [iConnect Global Tech](https://iconnectglobaltech.com) mentorship cohort on **February 21, 2026 at 1:00 PM EAT**. It demonstrates how AI-assisted development with GitHub Copilot and multi-agent orchestration can scaffold a full .NET web application from a single prompt.
+
+For the accompanying presentation slides, see [Modern Software Development Flow.pdf](Modern%20Software%20Development%20Flow.pdf).
+
 ## How It Works
 
 The `.github/` folder contains instruction files that guide Copilot's behavior:
