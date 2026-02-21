@@ -1,0 +1,15 @@
+@page
+@model QrCodeCreator.Pages.ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="error-container">
+    <h1>Oops!</h1>
+    <h2>Something went wrong.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>Request ID: <code>@Model.RequestId</code></p>
+    }
+</div>

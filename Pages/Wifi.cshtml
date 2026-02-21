@@ -1,0 +1,54 @@
+@page
+@model QrCodeCreator.Pages.WifiModel
+@{
+    ViewData["Title"] = "WiFi QR Code";
+}
+
+<div class="page-header">
+    <h1>WiFi QR Code Generator</h1>
+    <p>Enter your WiFi details to generate a scannable QR code for easy connection</p>
+</div>
+
+<div class="card">
+    <div class="generator">
+        <div class="form-section">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Ssid">Network Name (SSID)</label>
+                    <input asp-for="Ssid" type="text" placeholder="My WiFi Network" />
+                    <span asp-validation-for="Ssid"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" type="password" placeholder="Enter WiFi password" />
+                    <span asp-validation-for="Password"></span>
+                    <p class="hint">Leave empty for open networks</p>
+                </div>
+
+                <div class="checkbox-group">
+                    <input asp-for="IsHidden" type="checkbox" id="IsHidden" />
+                    <label for="IsHidden">Hidden network</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Generate QR Code</button>
+            </form>
+        </div>
+
+        <div class="qr-display">
+            @if (!string.IsNullOrEmpty(Model.QrCodeSvg))
+            {
+                <div class="qr-result">
+                    @Html.Raw(Model.QrCodeSvg)
+                </div>
+            }
+            else
+            {
+                <div class="qr-placeholder">
+                    <div class="icon">📶</div>
+                    <p>Your QR code will appear here</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

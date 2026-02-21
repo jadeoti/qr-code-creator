@@ -1,0 +1,42 @@
+@page
+@model QrCodeCreator.Pages.IndexModel
+@{
+    ViewData["Title"] = "URL QR Code";
+}
+
+<div class="page-header">
+    <h1>URL QR Code Generator</h1>
+    <p>Enter a URL below to generate a scannable QR code</p>
+</div>
+
+<div class="card">
+    <div class="generator">
+        <div class="form-section">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Url">Website URL</label>
+                    <input asp-for="Url" type="url" placeholder="https://example.com" />
+                    <span asp-validation-for="Url"></span>
+                    <p class="hint">Enter the full URL including https://</p>
+                </div>
+                <button type="submit" class="btn btn-primary">Generate QR Code</button>
+            </form>
+        </div>
+
+        <div class="qr-display">
+            @if (!string.IsNullOrEmpty(Model.QrCodeSvg))
+            {
+                <div class="qr-result">
+                    @Html.Raw(Model.QrCodeSvg)
+                </div>
+            }
+            else
+            {
+                <div class="qr-placeholder">
+                    <div class="icon">🔗</div>
+                    <p>Your QR code will appear here</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

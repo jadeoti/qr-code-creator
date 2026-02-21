@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - QR Code Creator</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="brand">📱 QR Code Creator</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Index" || ViewContext.RouteData.Values["page"] == null ? "active" : "")">URL</a>
+                <a href="/Wifi" class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Wifi" ? "active" : "")">WiFi</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year QR Code Creator</p>
+    </footer>
+</body>
+</html>
