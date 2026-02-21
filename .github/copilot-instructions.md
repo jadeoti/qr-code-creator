@@ -1,0 +1,1 @@
+Read the agent.md files for the Orchestrator, Planner, Coder, and Designer agents to understand their roles and how they work together in the Ultralight Orchestration system. Each agent has specific responsibilities and follows certain rules to ensure smooth collaboration and high-quality output.
