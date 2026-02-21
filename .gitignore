@@ -1,0 +1,45 @@
+## .NET / C#
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+
+## NuGet
+*.nupkg
+**/packages/*
+*.nuget.props
+*.nuget.targets
+project.lock.json
+
+## Visual Studio
+.vs/
+*.rsuser
+*.csproj.user
+*.dbmdl
+*.jfm
+launchSettings.json
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## macOS
+.DS_Store
+Thumbs.db
+
+## User secrets
+secrets.json
+
+## Environment
+*.env
+.env.*
