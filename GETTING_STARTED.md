@@ -21,6 +21,8 @@ The `.github/` folder contains instruction files that guide Copilot's behavior:
 
 VS Code reads these files automatically and uses them to shape how Copilot responds.
 
+> **Note:** The agent definition files specify premium models (e.g. Claude Sonnet 4.5, GPT-5.3-Codex, Gemini 3 Pro). If you don't have a GitHub Copilot premium subscription, you can change the `model` field in each `.agent.md` file to any model freely available in GitHub Copilot (e.g. GPT-4o). The orchestration workflow will work the same way regardless of which model you choose.
+
 ## Get Started
 
 1. Open this project in **VS Code**
